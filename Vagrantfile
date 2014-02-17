@@ -3,5 +3,6 @@ Vagrant::Config.run do |config|
   config.vm.box = "precise64"
   config.vm.box_url = "http://files.vagrantup.com/precise64.box"
   config.vm.forward_port 27017, 27017
+  config.vm.forward_port 28017, 28017
   config.vm.provision :puppet, :module_path => ["manifests"]
 end
